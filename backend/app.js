@@ -10,7 +10,8 @@ const { passport } = require('./config/passport');
 const router = require('./routes');
 
 const app = express();
-const public_path = path.join(__dirname, 'public');
+const upload_path = path.join(__dirname, 'uploads');
+const public_path = path.join(__dirname, '..', 'frontend', 'build');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -20,9 +21,7 @@ app.use(cookieParser());
 app.use(cors());
 app.use(passport.initialize());
 app.use('/api', router);
+app.use('/uploads', express.static(upload_path));
 app.use(express.static(public_path));
-app.get('*', (req, res) => {
-    res.sendFile(path.join(public_path, 'index.html'));
-});
 
 module.exports = app;
