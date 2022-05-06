@@ -1,0 +1,22 @@
+{
+  "name": "gorillafund",
+  "version": "1.0.0",
+  "description": "A peer-to-peer funding businesses that help others, or make positive impact. In Crypto.",
+  "scripts": {
+    "start": "npm --prefix ./backend start",
+    "dev": "npm --prefix ./backend run dev",
+    "build": "npm --prefix ./frontend run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "true"
+  },
+  "keywords": [
+    "gorillafund",
+    "apegorilla",
+    "AGC",
+    "apegorillaclub"
+  ],
+  "author": "supercoolx",
+  "license": "ISC"
+}
